@@ -1,0 +1,537 @@
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #e74c3c;
+  --background-color: #ecf0f1;
+  --text-color: #34495e;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: rgb(255, 255, 255);
+  color: var(--text-color);
+}
+
+header {
+  background-color: #4169e1; /* Menambahkan transparansi */
+  color: #ffffff;
+  padding: 1rem 2rem;
+  position: fixed; /* Tetap di atas saat di-scroll */
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: -4px;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  font-family: candara;
+}
+
+.menu {
+  display: flex; /* Tampilkan menu secara default (desktop) */
+  list-style: none;
+}
+
+.menu li {
+  margin-left: 1.5rem;
+}
+
+.menu li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+  color: var(--secondary-color);
+}
+
+#menu-toggle,
+.menu-icon {
+  display: none; /* Sembunyikan checkbox dan ikon menu secara default */
+}
+/* sampai sini*/
+
+/* Headline Section */
+#headline {
+  position: relative;
+  text-align: center;
+  margin-top: 80px; /* Untuk menghindari tertutup oleh header */
+}
+
+#headline h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  font-family: candara;
+}
+
+.headline-content p {
+  font-size: 1.2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  font-family: "Roboto", sans-serif;
+}
+
+.headline-container {
+  position: relative;
+}
+
+.headline-image {
+  width: 100%;
+  height: 300%;
+}
+
+.headline-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white; /* Pastikan warna tulisan terlihat di atas gambar */
+}
+
+.read-more {
+  display: inline-block;
+  background-color: var(--secondary-color);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  margin-top: 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.read-more:hover {
+  background-color: #c0392b;
+}
+
+/* untuk fungsi daftar wisma*/
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.news-grid article {
+  background-color: #fffaf0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.news-grid article img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.news-grid article:hover img, /* Untuk efek hover di desktop */
+.news-grid article.touch-active img {
+  /* Untuk efek saat disentuh di perangkat sentuh */
+  transform: scale(1.1);
+}
+
+.news-grid h3 {
+  padding: 1rem;
+}
+
+.news-grid p {
+  padding: 0 1rem 1rem;
+  margin: 0;
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  padding: 2rem 0;
+  background-color: #4169e1;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.footer-section {
+  flex: 1;
+  margin-right: 2rem;
+}
+
+.footer-section:last-child {
+  margin-right: 0;
+}
+
+.footer-section h4 {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section p,
+.footer-section ul {
+  margin: 0;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 0.5rem 0;
+}
+
+/* Styling khusus untuk social media */
+.footer-section .social-icons {
+  display: flex;
+  justify-content: center; /* Untuk menyesuaikan layout */
+  margin: 1rem 0; /* Jarak antar social media dengan konten lainnya */
+}
+
+.footer-section .social-icons ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section .social-icons ul li {
+  margin: 0 10px;
+}
+
+.footer-section .social-icons ul li a {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: block;
+  text-align: center;
+  border-radius: 50%;
+  padding: 6px;
+  box-sizing: border-box;
+  text-decoration: none;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(0deg, #ddd, #fff);
+  transition: 0.5s;
+}
+
+.footer-section .social-icons ul li a:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+}
+
+.footer-section .social-icons ul li a .fab {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: linear-gradient(0deg, #fff, #ddd);
+  border-radius: 50%;
+  line-height: 48px;
+  font-size: 24px;
+  color: #262626;
+  transition: 0.5s;
+}
+
+.footer-section .social-icons ul li:nth-child(1) a:hover .fab {
+  color: #3b5998; /* Facebook */
+}
+
+.footer-section .social-icons ul li:nth-child(2) a:hover .fab {
+  color: #00aced; /* Twitter */
+}
+
+.footer-section .social-icons ul li:nth-child(3) a:hover .fab {
+  color: #dd4b39; /* Google Plus */
+}
+
+.footer-section .social-icons ul li:nth-child(4) a:hover .fab {
+  color: #007bb6; /* LinkedIn */
+}
+
+.footer-section .social-icons ul li:nth-child(5) a:hover .fab {
+  color: #e4405f; /* Instagram */
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: #4169e1;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    display: none; /* Sembunyikan menu di mobile */
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 50;
+    background-color: var(--primary-color);
+    padding: 1rem;
+  }
+}
+
+.menu-icon {
+  display: block; /* Tampilkan ikon menu di mobile */
+  cursor: pointer;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+#menu-toggle {
+  display: none; /* Sembunyikan checkbox secara visual */
+}
+
+#menu-toggle:checked + .menu-icon + .menu {
+  display: flex; /* Tampilkan menu ketika checkbox dicentang */
+}
+
+.footer-content {
+  flex-direction: column;
+}
+
+.footer-section {
+  margin-right: 0;
+  margin-bottom: 1.5rem;
+}
+
+.booking-section {
+  margin-top: 20px;
+}
+
+/* Tombol Booking */
+.booking-btn {
+  display: inline-block; /* Menampilkan elemen a sebagai blok inline */
+  padding: 15px 30px; /* Ukuran padding tombol */
+  margin-top: 20px; /* Jarak antara tulisan dan tombol */
+  background-color: #3498db; /* Warna latar belakang tombol */
+  color: white; /* Warna teks tombol */
+  border: none;
+  border-radius: 5px; /* Membuat sudut tombol membulat */
+  text-decoration: none; /* Menghilangkan garis bawah pada teks */
+  font-size: 16px; /* Ukuran font */
+  font-weight: bold; /* Membuat teks lebih tebal */
+  cursor: pointer; /* Mengubah kursor menjadi pointer saat hover */
+  transition: background-color 0.3s ease; /* Efek transisi saat hover */
+}
+
+.booking-btn:hover {
+  background-color: #2980b9; /* Warna tombol saat di-hover */
+}
+
+.maps-section {
+  margin-left: 5px; /* Jarak dari section sebelumnya */
+}
+
+.maps-section iframe {
+  width: 50%;
+  max-width: 400px; /* ukuran maksimum peta */
+  width: 450px;
+  height: 300px; /* tinggi peta */
+  border: none; /* hilangkan border */
+}
+
+#tengah h2 {
+  text-align: left;
+  margin-left: 20px; /* Menambahkan margin kiri */
+  margin-top: 20px; /* Jarak atas untuk estetika */
+}
+
+.booking-btn-custom {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #3498db; /* Warna biru yang mencolok */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s; /* Tambahkan transform untuk efek klik */
+}
+
+.booking-btn-custom:hover {
+  background-color: #2980b9; /* Warna lebih gelap saat hover */
+}
+
+.booking-btn-custom:active {
+  background-color: #1c6ea4; /* Warna saat tombol ditekan */
+  transform: scale(0.95); /* Membuat tombol sedikit mengecil saat ditekan */
+}
+
+.register-btn {
+  display: inline-block; /* Menampilkan elemen a sebagai blok inline */
+  padding: 3px 8px; /* Ukuran padding tombol */
+  background-color: #3498db; /* Warna latar belakang tombol */
+  color: white; /* Warna teks tombol */
+  border: none; /* Menghilangkan border */
+  border-radius: 5px; /* Membuat sudut tombol membulat */
+  text-decoration: none; /* Menghilangkan garis bawah pada teks */
+  font-size: 16px; /* Ukuran font */
+  font-weight: bold; /* Membuat teks lebih tebal */
+  transition: background-color 0.3s ease; /* Efek transisi saat hover */
+}
+
+.register-btn:hover {
+  background-color: #80ccff; /* Warna tombol saat di-hover */
+}
+
+.register-btn:active {
+  background-color: #2980b9; /* Warna latar belakang saat tombol ditekan */
+  color: white; /* Pastikan warna teks tetap putih saat ditekan */
+  transform: scale(0.95); /* Sedikit mengecilkan tombol saat ditekan */
+}
+
+/*untuk bgain gambar kalimat */
+.gambar-kalimat {
+  display: flex;
+  flex-direction: row-reverse; /* Membuat gambar di sebelah kanan */
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.kalimat {
+  width: 80%;
+  margin-left: 100px; /* Mengubah margin agar ada jarak dengan gambar */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.kalimat p {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.gambar {
+  width: 40%;
+}
+
+.gambar img {
+  width: 50%; /* Atur ukuran gambar sesuai dengan elemen div gambar */
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* untuk batris payment */
+.payment-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+.payment-title h2 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.bank-logos {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.bank-logos img {
+  width: 80px; /* Ukuran kecil untuk logo bank */
+  height: auto;
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+/* css untuk icon footer */
+
+.icons ul {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.icons ul li {
+  list-style: none;
+}
+
+.icons ul li a {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: block;
+  text-align: center;
+  margin: 0 10px;
+  border-radius: 50%;
+  padding: 6px;
+  box-sizing: border-box;
+  text-decoration: none;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(0deg, #ddd, #fff);
+  transition: 0.5s;
+}
+
+.icons ul li a:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+}
+
+.icons ul li a .fab {
+  height: 100%;
+  display: block;
+  background: linear-gradient(0deg, #fff, #ddd);
+  border-radius: 50%;
+  line-height: calc(60px - 12px);
+  font-size: 24px;
+  color: #262626;
+  transition: 0.5s;
+}
+
+.icons ul li:nth-child(1) a:hover .fab {
+  color: #3b5998;
+}
+
+ul li:nth-child(2) a:hover .fab {
+  color: #00aced;
+}
+
+ul li:nth-child(3) a:hover .fab {
+  color: #dd4b39;
+}
+
+ul li:nth-child(4) a:hover .fab {
+  color: #007bb6;
+}
+
+ul li:nth-child(5) a:hover .fab {
+  color: #e4405f;
+}

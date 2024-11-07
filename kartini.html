@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel Information and Facilities</title>
+    <link rel="stylesheet" href="assets/css/kartini.css" />
+    <!-- Link to FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  </head>
+  <body>
+    <header>
+      <h1>WISMA R.A KARTINI</h1>
+    </header>
+    <main>
+      <section id="about">
+        <h2>Tentang Wisma</h2>
+        <p>Wisma R.A Kartini dilengkapi fasilitas yang memadai seperti kamar mandi dalam, AC, lemari, meja kursi belajar, tempat tidur, dan lain lain.</p>
+
+        <!-- Info lantai, tempat tidur, dan jumlah orang -->
+        <div class="hotel-info">
+          <div class="info-item"><i class="fas fa-building"></i> 6 Lantai</div>
+          <div class="info-item"><i class="fas fa-bed"></i> 108 Kamar</div>
+          <div class="info-item"><i class="fas fa-users"></i> Kapasitas 216 Orang</div>
+          <div class="info-item"><i class="fa-solid fa-toilet"></i> Kamar mandi dalam</div>
+        </div>
+      </section>
+
+      <section id="rooms">
+        <h2>Ruangan</h2>
+        <div class="image-grid">
+          <img src="assets/img/kartini1.jpg" alt="" />
+          <img src="assets/img/rkartini1.jpg" alt="" />
+          <img src="assets/img/rkartini2.jpg" alt="" />
+          <img src="assets/img/rkartini3.jpg" alt="" />
+        </div>
+      </section>
+
+      <section id="facilities">
+        <h2>Fasilitas</h2>
+        <div class="image-grid">
+          <img src="assets/img/fkartini1.jpg" alt="KURSI" />
+          <img src="assets/img/fkartini2.jpg" alt="Spa" />
+          <img src="assets/img/fkartini3.jpg" alt="Gym" />
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; BBPMP JATENG</p>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3></h3>
+          <p>Balai Besar Penjaminan Mutu Pendidikan. Jl. Kyai Mojo, Srondol Kulon, Kec. Banyumanik, Kota Semarang, Jawa Tengah 50263</p>
+        </div>
+        <div class="footer-section">
+          <h3></h3>
+          <p>Email: info@bbpmpjateng.com</p>
+          <p>Telepon: (021) 1234-5678</p>
+        </div>
+      <div class="maps-section">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.651701746915!2d110.40813137403762!3d-7.0501507690829195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708be5ab2efc47%3A0x1fb79229e485c61f!2sBalai%20Besar%20Penjaminan%20Mutu%20Pendidikan%20(BBPMP)%20Provinsi%20Jawa%20Tengah!5e0!3m2!1sid!2sid!4v1727336487994!5m2!1sid!2sid"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </footer>
+
+    <!-- Modal structure for images -->
+    <div id="modal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modal-img" />
+    </div>
+
+    <script src="assets/js/kartini.js"></script>
+  </body>
+</html>

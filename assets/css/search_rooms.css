@@ -1,0 +1,114 @@
+/* Reset default margin dan padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Gaya dasar untuk body */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f5f5f5; /* Warna latar belakang halaman */
+  color: #333; /* Warna teks */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Judul */
+h2 {
+  margin-bottom: 20px;
+  color: #2c3e50; /* Warna judul */
+}
+
+/* Gaya untuk container kartu */
+.card-container {
+  display: flex; /* Menggunakan flexbox untuk mendatar */
+
+  padding: 10px;
+  gap: 30px; /* Jarak antar kartu */
+  max-width: 100%; /* Batas maksimal lebar */
+}
+
+/* Gaya untuk setiap kartu wisma */
+.card {
+  background-color: white; /* Latar belakang kartu */
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Bayangan lebih jelas */
+  overflow: hidden;
+  width: 400px; /* Lebar kartu lebih besar */
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05); /* Efek zoom saat hover */
+}
+
+/* Gaya untuk gambar wisma */
+.card img {
+  width: 100%; /* Gambar responsif */
+  height: 120px; /* Tinggi gambar */
+  object-fit: cover; /* Memastikan gambar tidak terdistorsi */
+}
+
+/* Gaya untuk informasi wisma */
+.card-content {
+  padding: 15px;
+  text-align: center;
+}
+
+.card-content h3 {
+  margin: 10px 0;
+  font-size: 18px; /* Ukuran font lebih besar untuk nama wisma */
+  color: #2c3e50; /* Warna nama wisma yang lebih gelap */
+  font-family: "Cinzel", serif; /* Menggunakan font Cinzel */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Tambahkan bayangan teks untuk efek sinematik */
+  height: 60px; /* Tinggi tetap untuk memastikan keseragaman */
+  overflow: visible; /* Tampilkan semua teks */
+  text-overflow: clip; /* Tidak menampilkan elipsis */
+  white-space: normal; /* Izinkan teks membungkus */
+}
+
+.card-content p {
+  font-size: 14px; /* Ukuran font lebih kecil untuk harga */
+  color: #7f8c8d; /* Warna harga */
+}
+
+/* Tombol lanjut ke form booking */
+button {
+  background-color: #3498db; /* Warna tombol */
+  color: white; /* Warna teks tombol */
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px; /* Ukuran tombol lebih besar */
+  font-size: 15px; /* Ukuran font tombol lebih besar */
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: inline-block; /* Memastikan tombol tidak mengisi seluruh lebar */
+  margin-top: 10px; /* Jarak atas untuk tombol */
+  width: 100%; /* Tombol mengisi lebar kartu */
+}
+
+button:hover {
+  background-color: #2980b9; /* Warna saat hover */
+}
+
+/* Pesan tidak ada kamar yang tersedia */
+p {
+  margin-top: 20px;
+  color: #e74c3c; /* Warna untuk pesan error */
+}
+
+/* Gaya untuk form pemilihan wisma */
+form {
+  background-color: rgba(255, 255, 255, 0.9); /* Latar belakang form */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 1000px; /* Lebar maksimal form */
+  text-align: center;
+}
